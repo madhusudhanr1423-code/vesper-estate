@@ -34,7 +34,7 @@ export function Hero() {
       />
 
       {/* Asymmetric content */}
-      <div className="container-page relative z-10 flex min-h-[100svh] flex-col justify-end pt-28 md:pt-0 pb-20 md:pb-28">
+      <div className="container-page relative z-10 flex min-h-[100svh] flex-col justify-end pt-24 md:pt-0 pb-20 md:pb-28">
         <div className="grid gap-10 md:grid-cols-12 md:gap-8 items-end">
           <div className="md:col-span-8">
            <div className="flex items-center gap-4 mb-6">
@@ -82,7 +82,7 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="md:col-span-4 md:pb-4 space-y-8"
           >
-            <p className="max-w-sm text-base leading-8 tracking-[0.01em] max-w-[380px] text-bone/85">
+            <p className="max-w-sm text-base leading-6 tracking-[0.01em] max-w-[380px] text-bone/85">
               We represent a discreet selection of architectural residences,
               private estates and coastal retreats — placed with a small
               global clientele who prize quiet, provenance and permanence.

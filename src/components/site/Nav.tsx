@@ -43,7 +43,7 @@ useEffect(() => {
       });
     },
     {
-      threshold: 0.35,
+      threshold: 0.1,
     }
   );
 
@@ -53,6 +53,7 @@ useEffect(() => {
 }, []);
 
   return (
+    <>
     <motion.header
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -89,6 +90,7 @@ useEffect(() => {
             <a
               key={l.href}
               href={l.href}
+               onClick={() => setActiveSection(l.href.replace("#", ""))}
               className={`relative group py-1 transition-colors duration-300 ${
   activeSection === l.href.replace("#", "")
     ? "text-gilt"
@@ -139,6 +141,7 @@ useEffect(() => {
 />
         </button>
       </div>
+      </motion.header>
 
       <AnimatePresence>
         {open && (
@@ -194,6 +197,6 @@ useEffect(() => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </>
   );
 }

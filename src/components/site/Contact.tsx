@@ -31,7 +31,7 @@ export function Contact() {
   <img
     src="/luxuryoffice1.jpg"
     alt="Vesper private office"
-    className="h-full w-full object-cover transition-transform duration-[1500ms] group-hover:scale-105"
+    className="h-full w-full object-cover object-center md:object-center transition-transform duration-[1500ms] group-hover:scale-105"
   />
 
   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />

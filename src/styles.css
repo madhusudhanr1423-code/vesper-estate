@@ -107,8 +107,13 @@ body {
 }
 
 @utility marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee 18s linear infinite;
+
+  @media (min-width: 768px) {
+  animation: marquee 30s linear infinite;
 }
+}
+
 
 @keyframes marquee {
   from { transform: translateX(0); }

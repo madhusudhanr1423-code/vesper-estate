@@ -30,7 +30,7 @@ export function Hero() {
       </motion.div>
       <motion.div
         style={{ opacity: overlay }}
-        className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/20 to-black/85"
+        className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/45 to-black/85"
       />
 
       {/* Asymmetric content */}
@@ -41,12 +41,12 @@ export function Hero() {
 
             <div className="w-12 h-px bg-gilt" />
 
-            <div className="eyebrow text-bone/70">
+            <div className="eyebrow text-neutral-900 font-bold">
              Exclusive residences across the world's most desirable destinations.
             </div>
 
       </div>
-            <h1 className="font-display text-[15vw] sm:text-[12vw] md:text-[10vw] leading-[0.88] tracking-tight md:text-[8vw] lg:text-[6.8rem]">
+            <h1 className="mt-6 font-display text-[3rem] sm:text-[4.5rem] leading-[0.88] tracking-tight md:text-[8vw] lg:text-[6.8rem]">
 
   <motion.span
     initial={{ opacity: 0, y: 40 }}
@@ -82,7 +82,7 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="md:col-span-4 md:pb-4 space-y-8"
           >
-            <p className="max-w-sm text-base leading-6 tracking-[0.01em] max-w-[380px] text-bone/85">
+            <p className="max-w-sm text-base leading-6 tracking-[0.01em] max-w-[380px] text-white drop-shadow-lg">
               We represent a discreet selection of architectural residences,
               private estates and coastal retreats — placed with a small
               global clientele who prize quiet, provenance and permanence.

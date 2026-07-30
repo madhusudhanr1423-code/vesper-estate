@@ -94,8 +94,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Vesper Estates — Architectural Residences & Private Estates" },
       { name: "twitter:description", content: "Vesper Estates curates a discreet portfolio of architectural residences, private estates and coastal retreats for a global clientele." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3f36990e-9585-4722-8d8f-4d19d18318a6/id-preview-5d400bdb--774df696-1c6c-48a6-b7dc-1c3e69f36aa3.lovable.app-1784878567109.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3f36990e-9585-4722-8d8f-4d19d18318a6/id-preview-5d400bdb--774df696-1c6c-48a6-b7dc-1c3e69f36aa3.lovable.app-1784878567109.png" },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

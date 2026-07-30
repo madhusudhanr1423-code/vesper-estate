@@ -131,7 +131,7 @@ function PropertyRow({
           <Spec icon={<Ruler className="h-4 w-4" />} label="Interior" value={item.area} />
         </div>
         <div className="rule" />
-        <div className="flex items-end justify-between pt-2">
+        <div className="flex flex-wrap items-end justify-between gap-3 pt-2">
           <div>
             <div className="text-[0.65rem] tracking-[0.24em] uppercase text-stone-2">
               Guide price

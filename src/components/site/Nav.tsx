@@ -64,14 +64,16 @@ useEffect(() => {
     : "bg-black/25 backdrop-blur-xl border-b border-white/10 text-bone"
 }`}
     >
-     <div
-  className={`container-page flex items-center justify-between transition-all duration-500 ${
+    <div
+className={`container-page flex items-center justify-between transition-all duration-500 px-5 sm:px-6 lg:px-8 ${
     scrolled ? "py-3.5 md:py-4" : "py-5 md:py-6"
   }`}
 >
+
+
        <a
   href="#top"
-  className="group flex items-baseline gap-2 font-display text-[1.9rem] tracking-tight transition-all duration-500"
+  className="group flex items-baseline gap-2 font-display text-[1.7rem] lg:text-[1.9rem]"
 >
          <span className={`transition-colors duration-500 ${scrolled ? "text-obsidian" : "text-white"} group-hover:text-gilt`}>
   Vesper
@@ -85,7 +87,8 @@ useEffect(() => {
 </span>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-10 text-[0.78rem] tracking-[0.18em] uppercase">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-10 ml-4 xl:ml-6 text-[0.78rem] tracking-[0.18em] uppercase">
+
           {links.map((l) => (
             <a
               key={l.href}
@@ -109,25 +112,24 @@ useEffect(() => {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-6">
-          <span
-  className={`text-[0.72rem] tracking-[0.22em] uppercase transition-colors duration-500 ${
+      <div className="hidden lg:flex items-center ml-6 gap-5 xl:gap-8">
+  <span className={`text-[0.72rem] tracking-[0.22em] uppercase transition-colors duration-500 ${
     scrolled ? "text-obsidian/70" : "text-bone/90"
-  }`}
->
-            +1 310 555 0188
-          </span>
-          <a
-  href="#contact"
-  className={`rounded-full px-6 py-3 text-[0.72rem] tracking-[0.22em] uppercase transition-all duration-500 ${
-   scrolled
-? "border border-obsidian bg-transparent text-obsidian hover:bg-obsidian hover:text-bone"
-: "border border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white hover:text-obsidian"
-  }`}
->
-  Private Viewing
-</a>
-        </div>
+  }`}>
+    +1 310 555 0188
+  </span>
+  <a
+    href="#contact"
+    className={`rounded-full px-5 md:px-6 py-2.5 md:py-3 text-[0.72rem] tracking-[0.22em] uppercase transition-all duration-500 ${
+      scrolled
+        ? "border border-obsidian bg-transparent text-obsidian hover:bg-obsidian hover:text-bone"
+        : "border border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white hover:text-obsidian"
+    }`}
+  >
+    Private Viewing
+  </a>
+</div>
+
 
         <button
           className="lg:hidden p-2"
@@ -177,7 +179,7 @@ useEffect(() => {
                 hidden: {},
                 show: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } },
               }}
-              className="flex flex-col px-8 pt-28 pb-12 gap-8"
+             className="flex flex-col max-w-xl mx-auto px-8 pt-28 pb-12 gap-8"
             >
               {links.map((l) => (
                 <motion.a

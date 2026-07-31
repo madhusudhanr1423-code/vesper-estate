@@ -18,27 +18,28 @@ export function Contact() {
   )}`;
 
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden bg-obsidian text-bone py-28 md:py-40"
-    >
+   <section
+  id="contact"
+  className="relative overflow-hidden bg-obsidian text-bone py-20 md:py-40 px-4 sm:px-6"
+>
+
 
       {/* ambient luxury glow */}
       <div className="absolute -right-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-gilt/10 blur-[180px]" />
 
 
-      <div className="container-page grid gap-16 md:grid-cols-12">
+      <div className="container-page grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
 
         {/* LEFT CONTENT */}
 
-        <div className="md:col-span-5 space-y-10">
+        <div className="lg:col-span-5 space-y-10 lg:max-w-[90%]">
 
           <div>
             <div className="eyebrow text-bone/60 mb-6">
               — By appointment
             </div>
 
-            <h2 className="font-display text-5xl md:text-8xl leading-[0.88] tracking-tight">
+            <h2 className="font-display text-5xl sm:text-6xl lg:text-8xl leading-[0.88] tracking-tight">
               Begin a <em>private</em> conversation.
             </h2>
 
@@ -82,7 +83,7 @@ export function Contact() {
 
 
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
           {offices.map(([city,addr,tel])=>(
 
@@ -133,8 +134,7 @@ export function Contact() {
 
         {/* FORM / SUCCESS AREA */}
 
-        <div className="md:col-span-6 md:col-start-7">
-
+       <div className="lg:col-span-6 lg:col-start-7 w-full max-w-[600px] mx-auto lg:mx-0">
 
         <AnimatePresence mode="wait">
 
@@ -208,17 +208,8 @@ export function Contact() {
 
         }}
 
-
-        className="
-        bg-white/[0.04]
-        backdrop-blur-xl
-        border border-bone/10
-        rounded-2xl
-        p-8 md:p-12
-        space-y-10
-        shadow-[0_35px_80px_rgba(0,0,0,.35)]
-        "
-
+        className="bg-white/[0.04] backdrop-blur-xl border border-bone/10 rounded-2xl p-8 sm:p-8 lg:p-12 space-y-8 shadow-[0_35px_80px_rgba(0,0,0,.35)] w-full"
+        
         >
 
 
@@ -240,7 +231,7 @@ export function Contact() {
         <Field label="Full name" name="name" required/>
 
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-2">
 
         <Field label="Email" name="email" type="email" required/>
 
@@ -265,22 +256,13 @@ export function Contact() {
 
 
         <textarea
-        name="enquiry"
-        rows={4}
-        required
-        className="
-        mt-3
-        w-full
-        bg-transparent
-        border-b
-        border-bone/20
-        py-4
-        outline-none
-        focus:border-gilt
-        transition-all
-        "
-        placeholder="Tell us briefly what you are looking for."
-        />
+  name="enquiry"
+  rows={4}
+  required
+  className="mt-3 w-full bg-transparent border-b border-bone/20 py-4 outline-none focus:border-gilt transition-all text-sm"
+  placeholder="Tell us briefly what you are looking for."
+/>
+
 
 
         </div>
@@ -294,50 +276,21 @@ export function Contact() {
 
 
 
-        <div className="flex items-center justify-between pt-4">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
+  <p className="text-[0.65rem] tracking-[0.2em] uppercase text-bone/50 text-center sm:text-left">
+    All correspondence held in confidence.
+  </p>
+  <button
+    disabled={submitting}
+    className="group inline-flex items-center justify-center gap-3 rounded-full bg-gilt text-obsidian px-8 py-4 text-[0.72rem] tracking-[0.24em] uppercase transition-all duration-500 hover:bg-bone hover:-translate-y-1 w-full sm:w-auto"
+  >
+    {submitting ? "Sending..." : "Request an appointment"}
+    <ArrowUpRight className="h-4 w-4" />
+  </button>
+</div>
 
 
-        <p className="text-[0.65rem] tracking-[0.2em] uppercase text-bone/50 max-w-xs">
-        All correspondence held in confidence.
-        </p>
 
-
-
-        <button
-        disabled={submitting}
-        className="
-        group
-        inline-flex
-        items-center
-        gap-3
-        rounded-full
-        bg-gilt
-        text-obsidian
-        px-8
-        py-4
-        text-[0.72rem]
-        tracking-[0.24em]
-        uppercase
-        transition-all
-        duration-500
-        hover:bg-bone
-        hover:-translate-y-1
-        "
-        >
-
-        {submitting
-        ?"Sending..."
-        :"Request an appointment"
-        }
-
-
-        <ArrowUpRight className="h-4 w-4"/>
-
-
-        </button>
-
-
-        </div>
 
 
 
